@@ -1,0 +1,35 @@
+<mxfile host="Electron" modified="2026-08-26T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="class_03" name="03. Class Diagram - Kelola Data Kategori">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- CONTROLLER -->
+        <mxCell id="ctrl_cat" value="CategoryController&#xa;&#xa;+index()&#xa;+create()&#xa;+store()&#xa;+edit()&#xa;+update()&#xa;+destroy()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="110" width="160" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- DATA MANAGER -->
+        <mxCell id="mgr_data" value="DataManager&#xa;&#xa;-jenis_data : String&#xa;-status_validasi : Boolean&#xa;&#xa;+validasi_data()&#xa;+simpan_data()&#xa;+update_data()&#xa;+hapus_data()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="280" y="115" width="170" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- MODEL -->
+        <mxCell id="mdl_cat" value="&lt;&lt;Category&gt;&gt;&#xa;Model&#xa;&#xa;-id : Bigint&#xa;-name : String&#xa;-description : Text&#xa;&#xa;+create()&#xa;+update()&#xa;+delete()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="510" y="110" width="160" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- DATABASE -->
+        <mxCell id="db_sys" value="Database&#xa;&#xa;+insert()&#xa;+select()&#xa;+update()&#xa;+delete()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="320" width="140" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- DEPENDENCIES -->
+        <mxCell id="e1" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="ctrl_cat" target="mgr_data"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mgr_data" target="mdl_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mdl_cat" target="db_sys"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,157 @@
+<mxfile host="Electron" modified="2026-08-26T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="seq_04" name="04. Sequence Diagram - Kelola Barang">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- LIFELINES -->
+        <mxCell id="ll_user" value="user" style="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="line_user" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_user">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="95" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_view" value="view" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_view" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_view">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="260" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_ctrl" value="controller" style="shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_ctrl" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_ctrl">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="440" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_model" value="model" style="shape=umlEntity;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_model" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_model">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="620" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_db" value="database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="45" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="line_db" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;endArrow=none;" edge="1" parent="1" source="ll_db">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="820" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- ACTIVATIONS -->
+        <mxCell id="act_u1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_v1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="130" width="10" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="140" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="225" width="10" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- FORM CREATE -->
+        <mxCell id="m1" value="1: klik tambah barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="135" as="sourcePoint" /><mxPoint x="255" y="135" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2: create()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="145" as="sourcePoint" /><mxPoint x="435" y="145" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3: return view('items.create', compact('categories'))" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="170" as="sourcePoint" /><mxPoint x="265" y="170" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4: tampil form input barang &amp; dropdown kategori" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="180" as="sourcePoint" /><mxPoint x="100" y="180" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- SUBMIT -->
+        <mxCell id="m5" value="5: input SKU, nama, kategori, harga, stok, &amp; min_stock" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="225" as="sourcePoint" /><mxPoint x="255" y="225" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6: POST store()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="235" as="sourcePoint" /><mxPoint x="435" y="235" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7: validate(unique SKU, numeric prices, etc.)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="470" y="255" /><mxPoint x="470" y="275" /></Array>
+            <mxPoint x="445" y="255" as="sourcePoint" />
+            <mxPoint x="445" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ALT BOX VALIDASI -->
+        <mxCell id="alt_item" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=40;height=20;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="830" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="cond_val_fi" value="[validasi gagal]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="305" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_cfi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="320" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_vfi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="330" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ufi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="340" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" value="8: return error (SKU duplikat / input invalid)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="335" as="sourcePoint" /><mxPoint x="265" y="335" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="9: tampil pesan error pada form" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="350" as="sourcePoint" /><mxPoint x="100" y="350" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Divider -->
+        <mxCell id="div_alt_it" style="edgeStyle=none;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="390" as="sourcePoint" /><mxPoint x="890" y="390" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cond_val_si" value="[validasi berhasil]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="395" width="110" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_csi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="415" width="10" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="act_msi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="615" y="425" width="10" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="act_dsi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="815" y="440" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_vsi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="555" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="act_usi" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="575" width="10" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m10" value="10: Item::create(validated_data)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="445" y="430" as="sourcePoint" /><mxPoint x="615" y="430" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="11: INSERT INTO items (sku_code, name, purchase_price, ...) VALUES (...)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="625" y="445" as="sourcePoint" /><mxPoint x="815" y="445" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="12: status berhasil" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="815" y="480" as="sourcePoint" /><mxPoint x="625" y="480" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="13: item object" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="615" y="500" as="sourcePoint" /><mxPoint x="445" y="500" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="14: redirect('items.index') with success" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="565" as="sourcePoint" /><mxPoint x="265" y="565" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="15: tampil notifikasi sukses &amp; katalog barang terbaru" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="595" as="sourcePoint" /><mxPoint x="100" y="595" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,127 @@
+<mxfile host="Electron" modified="2026-08-26T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="seq_08" name="08. Sequence Diagram - Laporan Keuangan PDF">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- LIFELINES -->
+        <mxCell id="ll_user" value="user" style="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="line_user" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_user">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="95" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_view" value="view" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_view" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_view">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="260" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_ctrl" value="controller" style="shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_ctrl" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_ctrl">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="440" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_dompdf" value="PDF Engine&#xa;(DomPDF)" style="shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="580" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_dompdf" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_dompdf">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="600" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_model" value="model" style="shape=umlEntity;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_model" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_model">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="740" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_db" value="database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="860" y="45" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="line_db" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;endArrow=none;" edge="1" parent="1" source="ll_db">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="900" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- ACTIVATIONS -->
+        <mxCell id="act_u" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="10" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="act_v" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="130" width="10" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="145" width="10" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="act_m" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="735" y="165" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_d" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="895" y="180" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_pdf" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="595" y="440" width="10" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- 1. Filter and View -->
+        <mxCell id="m1" value="1: pilih rentang tanggal kas &amp; klik filter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="135" as="sourcePoint" /><mxPoint x="255" y="135" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2: financial(startDate, endDate)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="150" as="sourcePoint" /><mxPoint x="435" y="150" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3: FinancialTransaction::whereBetween(...)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="445" y="170" as="sourcePoint" /><mxPoint x="735" y="170" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4: SELECT * FROM financial_transactions WHERE transaction_date BETWEEN ? AND ?" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="745" y="190" as="sourcePoint" /><mxPoint x="895" y="190" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5: data transaksi kas masuk &amp; keluar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="895" y="235" as="sourcePoint" /><mxPoint x="745" y="235" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6: rekap total pemasukan, pengeluaran &amp; saldo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="735" y="260" as="sourcePoint" /><mxPoint x="445" y="260" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7: return view('reports.financial', compact(...))" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="290" as="sourcePoint" /><mxPoint x="265" y="290" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="8: tampil tabel rekapitulasi laporan keuangan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="315" as="sourcePoint" /><mxPoint x="100" y="315" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- 2. Export PDF -->
+        <mxCell id="m9" value="9: klik tombol Cetak / Export PDF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="390" as="sourcePoint" /><mxPoint x="255" y="390" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="10: financialPdf(startDate, endDate)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="410" as="sourcePoint" /><mxPoint x="435" y="410" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="11: PDF::loadView('reports.financial-pdf', data)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="445" y="445" as="sourcePoint" /><mxPoint x="595" y="445" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="12: render &amp; format PDF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="630" y="470" /><mxPoint x="630" y="495" /></Array>
+            <mxPoint x="605" y="470" as="sourcePoint" />
+            <mxPoint x="605" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="13: stream / download response" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="595" y="525" as="sourcePoint" /><mxPoint x="445" y="525" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="14: return download('laporan-keuangan.pdf')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="560" as="sourcePoint" /><mxPoint x="265" y="560" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="15: unduhan berkas PDF dimulai di browser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="590" as="sourcePoint" /><mxPoint x="100" y="590" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

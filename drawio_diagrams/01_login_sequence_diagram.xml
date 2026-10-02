@@ -1,0 +1,237 @@
+<mxfile host="Electron" modified="2026-08-26T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="seq_01" name="01. Sequence Diagram - Login">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ACTOR / LIFELINES -->
+        <!-- User Actor -->
+        <mxCell id="ll_user" value="user" style="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="line_user" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_user">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="75" y="880" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- View Boundary -->
+        <mxCell id="ll_view" value="view" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_view" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_view">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="220" y="880" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Controller Control -->
+        <mxCell id="ll_ctrl" value="controller" style="shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_ctrl" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_ctrl">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="380" y="880" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Auth Control -->
+        <mxCell id="ll_auth" value="auth" style="shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_auth" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_auth">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="540" y="880" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Model Entity -->
+        <mxCell id="ll_model" value="model" style="shape=umlEntity;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="680" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_model" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_model">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="700" y="880" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Database Box -->
+        <mxCell id="ll_db" value="database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="820" y="45" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="line_db" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;endArrow=none;" edge="1" parent="1" source="ll_db">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="860" y="880" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- ACTIVATION BARS -->
+        <mxCell id="act_u1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="10" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="act_v1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="130" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="140" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="240" width="10" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- MESSAGES: OPEN LOGIN FORM -->
+        <mxCell id="m1" value="1: akses halaman login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="80" y="140" as="sourcePoint" /><mxPoint x="215" y="140" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2: showLogin()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="225" y="150" as="sourcePoint" /><mxPoint x="375" y="150" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3: return view" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="375" y="180" as="sourcePoint" /><mxPoint x="225" y="180" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4: form login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="215" y="190" as="sourcePoint" /><mxPoint x="80" y="190" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- SUBMIT LOGIN -->
+        <mxCell id="m5" value="5: input username &amp; password" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="80" y="240" as="sourcePoint" /><mxPoint x="215" y="240" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6: POST login()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="225" y="250" as="sourcePoint" /><mxPoint x="375" y="250" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7: validate()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="410" y="270" /><mxPoint x="410" y="295" /></Array>
+            <mxPoint x="385" y="270" as="sourcePoint" />
+            <mxPoint x="385" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ALT BOX: VALIDASI -->
+        <mxCell id="alt1" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=40;height=20;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="870" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="cond_val_fail" value="[validasi gagal]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="90" y="335" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Fail action -->
+        <mxCell id="act_c_fail" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="350" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_v_fail" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="360" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_u_fail" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="70" y="370" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" value="8: return error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="375" y="365" as="sourcePoint" /><mxPoint x="225" y="365" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="9: tampil pesan error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="215" y="380" as="sourcePoint" /><mxPoint x="80" y="380" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- DIVIDER LINE IN ALT -->
+        <mxCell id="div_alt1" style="edgeStyle=none;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="40" y="420" as="sourcePoint" /><mxPoint x="910" y="420" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cond_val_success" value="[validasi berhasil]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="90" y="425" width="110" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- SUCCESS BRANCH -->
+        <mxCell id="act_c_succ" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="440" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_auth" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="535" y="450" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_model" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="695" y="465" width="10" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act_db" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="855" y="480" width="10" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m10" value="10: Auth::attempt()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="385" y="455" as="sourcePoint" /><mxPoint x="535" y="455" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="11: get user by username" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="545" y="470" as="sourcePoint" /><mxPoint x="695" y="470" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="12: SELECT * FROM users WHERE username = ?" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="705" y="485" as="sourcePoint" /><mxPoint x="855" y="485" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="13: data pengguna" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="855" y="520" as="sourcePoint" /><mxPoint x="705" y="520" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="14: pengguna object" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="695" y="535" as="sourcePoint" /><mxPoint x="545" y="535" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="15: verify password (bcrypt)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="570" y="555" /><mxPoint x="570" y="580" /></Array>
+            <mxPoint x="545" y="555" as="sourcePoint" />
+            <mxPoint x="545" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- NESTED ALT BOX: PASSWORD -->
+        <mxCell id="alt2" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=40;height=20;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="830" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="cond_pw_fail" value="[password salah]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="625" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Pw Fail -->
+        <mxCell id="act_auth_pwf" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="535" y="640" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ctrl_pwf" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="650" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_view_pwf" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="665" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_u_pwf" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="70" y="680" width="10" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m16" value="16: false" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="535" y="655" as="sourcePoint" /><mxPoint x="385" y="655" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m17" value="17: return error (kredensial salah)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="375" y="670" as="sourcePoint" /><mxPoint x="225" y="670" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m18" value="18: tampil pesan error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="215" y="685" as="sourcePoint" /><mxPoint x="80" y="685" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Divider Line in nested alt -->
+        <mxCell id="div_alt2" style="edgeStyle=none;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="720" as="sourcePoint" /><mxPoint x="890" y="720" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cond_pw_succ" value="[password benar]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="725" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Pw Success -->
+        <mxCell id="act_auth_pws" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="535" y="740" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ctrl_pws" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="750" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_view_pws" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="765" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_u_pws" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="70" y="780" width="10" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m19" value="19: true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="535" y="755" as="sourcePoint" /><mxPoint x="385" y="755" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m20" value="20: redirect(dashboard)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="375" y="775" as="sourcePoint" /><mxPoint x="225" y="775" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m21" value="21: tampil halaman dashboard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="215" y="795" as="sourcePoint" /><mxPoint x="80" y="795" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

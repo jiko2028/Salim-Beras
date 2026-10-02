@@ -1,0 +1,53 @@
+<mxfile host="Electron" modified="2026-08-22T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="diag_08" name="08. Laporan Keuangan PDF">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l_admin_rf" value="admin" style="swimlane;startSize=30;horizontal=1;container=1;collapsible=0;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="100" y="40" width="200" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="start_rf" value="" style="ellipse;fillColor=#000000;strokeColor=none;" vertex="1" parent="l_admin_rf">
+          <mxGeometry x="85" y="50" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="act_pilih_rf" value="pilih menu laporan keuangan" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_admin_rf">
+          <mxGeometry x="25" y="110" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act_filter_rf" value="pilih rentang tanggal &amp; klik filter" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_admin_rf">
+          <mxGeometry x="25" y="220" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_pdf_rf" value="klik tombol cetak / export PDF" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_admin_rf">
+          <mxGeometry x="25" y="380" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l_sistem_rf" value="sistem" style="swimlane;startSize=30;horizontal=1;container=1;collapsible=0;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="220" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="act_show_rf" value="tampil halaman laporan kas &amp; form filter tanggal" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_sistem_rf">
+          <mxGeometry x="35" y="150" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act_rekap_rf" value="kalkulasi total pemasukan, pengeluaran, &amp; kas bersih" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_sistem_rf">
+          <mxGeometry x="35" y="290" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_gen_pdf_rf" value="generate dokumen PDF laporan keuangan" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_sistem_rf">
+          <mxGeometry x="35" y="440" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act_dl_pdf_rf" value="memulai unduhan file PDF pada browser" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="l_sistem_rf">
+          <mxGeometry x="35" y="520" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="end_rf" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="l_sistem_rf">
+          <mxGeometry x="95" y="600" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="erf1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="start_rf" target="act_pilih_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_pilih_rf" target="act_show_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_show_rf" target="act_filter_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_filter_rf" target="act_rekap_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_rekap_rf" target="act_pdf_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_pdf_rf" target="act_gen_pdf_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_gen_pdf_rf" target="act_dl_pdf_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="erf8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_dl_pdf_rf" target="end_rf"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,187 @@
+<mxfile host="Electron" modified="2026-08-26T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="seq_05" name="05. Sequence Diagram - Transaksi Persediaan">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- LIFELINES -->
+        <mxCell id="ll_user" value="user" style="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="line_user" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_user">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="95" y="860" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_view" value="view" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_view" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_view">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="260" y="860" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_ctrl" value="controller" style="shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_ctrl" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_ctrl">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="440" y="860" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_model" value="model" style="shape=umlEntity;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="line_model" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1" source="ll_model">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="640" y="860" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="ll_db" value="database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="800" y="45" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="line_db" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;endArrow=none;" edge="1" parent="1" source="ll_db">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="840" y="860" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- ACTIVATIONS -->
+        <mxCell id="act_u1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_v1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="130" width="10" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="140" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_c2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="225" width="10" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- FORM CREATE -->
+        <mxCell id="m1" value="1: klik catat transaksi persediaan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="135" as="sourcePoint" /><mxPoint x="255" y="135" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2: create()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="145" as="sourcePoint" /><mxPoint x="435" y="145" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3: return view('inventory.create')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="170" as="sourcePoint" /><mxPoint x="265" y="170" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4: tampil form mutasi (pilihan in / out)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="180" as="sourcePoint" /><mxPoint x="100" y="180" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- SUBMIT -->
+        <mxCell id="m5" value="5: input item_id, tipe (in/out), qty, notes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="225" as="sourcePoint" /><mxPoint x="255" y="225" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6: POST store()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="235" as="sourcePoint" /><mxPoint x="435" y="235" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7: validate() &amp; cek ketersediaan stok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="470" y="255" /><mxPoint x="470" y="275" /></Array>
+            <mxPoint x="445" y="255" as="sourcePoint" />
+            <mxPoint x="445" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ALT BOX -->
+        <mxCell id="alt_inv" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=40;height=20;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="850" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="cond_inv_f" value="[barang keluar &amp; stok tidak mencukupi]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="305" width="220" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Fail -->
+        <mxCell id="act_cf_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="325" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_vf_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="335" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_uf_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="345" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" value="8: return error ('Stok tidak mencukupi')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="340" as="sourcePoint" /><mxPoint x="265" y="340" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="9: tampil pesan peringatan stok kurang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="355" as="sourcePoint" /><mxPoint x="100" y="355" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- Divider -->
+        <mxCell id="div_alt_inv" style="edgeStyle=none;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="395" as="sourcePoint" /><mxPoint x="910" y="395" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cond_inv_s" value="[stok mencukupi / barang masuk (valid)]" style="text;html=1;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="400" width="230" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Success Transactions -->
+        <mxCell id="act_cs_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="420" width="10" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ms_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="635" y="430" width="10" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ds_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="835" y="445" width="10" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="act_vs_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="255" y="730" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_us_inv" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="745" width="10" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- 10. Start DB Transaction -->
+        <mxCell id="m10" value="10: DB::transaction()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="470" y="430" /><mxPoint x="470" y="450" /></Array>
+            <mxPoint x="445" y="430" as="sourcePoint" />
+            <mxPoint x="445" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 11. Inventory create -->
+        <mxCell id="m11" value="11: InventoryTransaction::create(data)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="445" y="465" as="sourcePoint" /><mxPoint x="635" y="465" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="12: INSERT INTO inventory_transactions ..." style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="645" y="475" as="sourcePoint" /><mxPoint x="835" y="475" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- 13. Update Stock -->
+        <mxCell id="m13" value="13: item-&gt;increment/decrement('stock', qty)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="445" y="520" as="sourcePoint" /><mxPoint x="635" y="520" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="14: UPDATE items SET stock = stock +/- qty WHERE id = ?" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="645" y="535" as="sourcePoint" /><mxPoint x="835" y="535" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- 15. Financial create -->
+        <mxCell id="m15" value="15: FinancialTransaction::create(auto expense / income)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="445" y="585" as="sourcePoint" /><mxPoint x="635" y="585" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m16" value="16: INSERT INTO financial_transactions ..." style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="645" y="600" as="sourcePoint" /><mxPoint x="835" y="600" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- 17. Commit & Return -->
+        <mxCell id="m17" value="17: commit transaction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="835" y="650" as="sourcePoint" /><mxPoint x="645" y="650" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m18" value="18: status mutasi &amp; kas sukses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="635" y="675" as="sourcePoint" /><mxPoint x="445" y="675" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m19" value="19: redirect('inventory.index') with success" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="435" y="740" as="sourcePoint" /><mxPoint x="265" y="740" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m20" value="20: tampil pesan sukses &amp; riwayat mutasi stok terbaru" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#000000;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="255" y="765" as="sourcePoint" /><mxPoint x="100" y="765" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

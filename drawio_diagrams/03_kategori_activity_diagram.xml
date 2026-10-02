@@ -1,0 +1,64 @@
+<mxfile host="Electron" modified="2026-08-22T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="diag_03" name="03. Kelola Data Kategori">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_admin_cat" value="admin" style="swimlane;startSize=30;horizontal=1;container=1;collapsible=0;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="100" y="40" width="200" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="start_cat" value="" style="ellipse;fillColor=#000000;strokeColor=none;" vertex="1" parent="lane_admin_cat">
+          <mxGeometry x="85" y="50" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="act_pilih_cat" value="pilih menu data kategori" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_admin_cat">
+          <mxGeometry x="25" y="110" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_klik_cat_action" value="klik tambah / edit kategori" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_admin_cat">
+          <mxGeometry x="25" y="210" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_input_cat" value="input nama kategori &amp; deskripsi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_admin_cat">
+          <mxGeometry x="25" y="320" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act_simpan_cat_btn" value="klik tombol simpan" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_admin_cat">
+          <mxGeometry x="25" y="410" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lane_sistem_cat" value="sistem" style="swimlane;startSize=30;horizontal=1;container=1;collapsible=0;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="220" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tampil_cat_list" value="tampil daftar data kategori" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_sistem_cat">
+          <mxGeometry x="35" y="150" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_form_cat" value="tampil formulir data kategori" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_sistem_cat">
+          <mxGeometry x="35" y="260" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_val_cat" value="validasi&#xa;input" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_sistem_cat">
+          <mxGeometry x="65" y="395" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="act_save_cat_db" value="simpan data ke database" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_sistem_cat">
+          <mxGeometry x="35" y="510" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_sukses_cat" value="tampilkan pesan sukses &amp;&#xa;daftar kategori terbaru" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="lane_sistem_cat">
+          <mxGeometry x="25" y="580" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="end_cat" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="lane_sistem_cat">
+          <mxGeometry x="95" y="650" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ec1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="start_cat" target="act_pilih_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_pilih_cat" target="act_tampil_cat_list"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_tampil_cat_list" target="act_klik_cat_action"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_klik_cat_action" target="act_form_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_form_cat" target="act_input_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_input_cat" target="act_simpan_cat_btn"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_simpan_cat_btn" target="dec_val_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec8" value="input tidak valid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="dec_val_cat" target="act_form_cat">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="495" y="465" /><mxPoint x="495" y="300" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="ec9" value="iya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="dec_val_cat" target="act_save_cat_db"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_save_cat_db" target="act_sukses_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="act_sukses_cat" target="end_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

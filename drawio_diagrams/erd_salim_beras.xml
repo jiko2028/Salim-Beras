@@ -1,0 +1,297 @@
+<mxfile host="Electron" modified="2026-08-31T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="erd_salim_beras" name="Entity Relationship Diagram (ERD) - Salim Beras">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==========================================
+             1. ENTITY: USERS (PENGGUNA / ADMIN)
+             ========================================== -->
+        <mxCell id="ent_users" value="users" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="140" y="240" width="130" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Attributes Users -->
+        <mxCell id="att_u_id" value="id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="170" y="140" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_u_name" value="name" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_u_uname" value="username" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_u_pass" value="password" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_u_time" value="created_at" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="80" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- User Attribute Lines -->
+        <mxCell id="lu1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="att_u_id"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lu2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="att_u_name"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lu3" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="att_u_uname"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lu4" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="att_u_pass"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lu5" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="att_u_time"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+
+        <!-- ==========================================
+             2. ENTITY: KATEGORI (CATEGORIES)
+             ========================================== -->
+        <mxCell id="ent_cat" value="kategori" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="960" y="110" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Attributes Kategori -->
+        <mxCell id="att_c_id" value="id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="995" y="20" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_c_name" value="name" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="50" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_c_desc" value="description" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="120" width="85" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_c_time" value="created_at" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="190" width="80" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Kategori Attribute Lines -->
+        <mxCell id="lc1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_cat" target="att_c_id"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lc2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_cat" target="att_c_name"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lc3" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_cat" target="att_c_desc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lc4" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_cat" target="att_c_time"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+
+        <!-- ==========================================
+             3. ENTITY: BARANG (ITEMS)
+             ========================================== -->
+        <mxCell id="ent_item" value="barang" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="580" y="240" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Attributes Barang -->
+        <mxCell id="att_i_id" value="id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="510" y="130" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_catid" value="category_id" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="610" y="110" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_sku" value="sku_code" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="710" y="125" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_name" value="name" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="175" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_unit" value="unit" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="235" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_pprice" value="purchase_price" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="765" y="285" width="95" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_sprice" value="selling_price" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="740" y="340" width="85" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_stock" value="stock" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="660" y="365" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_i_minstock" value="min_stock" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="365" width="80" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Barang Attribute Lines -->
+        <mxCell id="li1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_id"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_catid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li3" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_sku"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li4" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_name"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li5" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_unit"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li6" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_pprice"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li7" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_sprice"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li8" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_stock"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="li9" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="att_i_minstock"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+
+        <!-- ==========================================
+             4. ENTITY: TRANSAKSI PERSEDIAAN (INVENTORY)
+             ========================================== -->
+        <mxCell id="ent_inv" value="transaksi_persediaan" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="570" y="600" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Attributes Transaksi Persediaan -->
+        <mxCell id="att_iv_id" value="id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="460" y="660" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_iv_itemid" value="item_id" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="490" y="720" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_iv_uid" value="user_id" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="580" y="740" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_iv_type" value="type" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="670" y="740" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_iv_qty" value="quantity" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="750" y="710" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_iv_notes" value="notes" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="650" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_iv_time" value="created_at" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="590" width="80" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Transaksi Persediaan Attribute Lines -->
+        <mxCell id="liv1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_id"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="liv2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_itemid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="liv3" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_uid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="liv4" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_type"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="liv5" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_qty"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="liv6" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_notes"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="liv7" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_inv" target="att_iv_time"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+
+        <!-- ==========================================
+             5. ENTITY: TRANSAKSI KEUANGAN (FINANCIAL)
+             ========================================== -->
+        <mxCell id="ent_fin" value="transaksi_keuangan" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="125" y="600" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Attributes Transaksi Keuangan -->
+        <mxCell id="att_f_id" value="id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="580" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_f_uid" value="user_id" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="640" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_f_type" value="type" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_f_cat" value="category" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="110" y="730" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_f_amt" value="amount" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="200" y="730" width="75" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_f_desc" value="description" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="290" y="710" width="85" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="att_f_date" value="transaction_date" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="310" y="650" width="105" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Transaksi Keuangan Attribute Lines -->
+        <mxCell id="lf1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_id"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lf2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_uid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lf3" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_type"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lf4" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_cat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lf5" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_amt"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lf6" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_desc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="lf7" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_fin" target="att_f_date"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+
+        <!-- ==========================================
+             RELATIONSHIPS (DIAMONDS) & CARDINALITY
+             ========================================== -->
+
+        <!-- 1. RELATION: users mengelola barang -->
+        <mxCell id="rel_u_item" value="mengelola" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="375" y="240" width="110" height="50" as="geometry" />
+        </mxCell>
+        <!-- Lines and Cardinality -->
+        <mxCell id="rl_u1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="rel_u_item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_u1" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_u1">
+          <mxGeometry x="-0.6" relative="1" as="geometry"><mxPoint y="-5" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rl_u2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="rel_u_item" target="ent_item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_u2" value="N" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_u2">
+          <mxGeometry x="0.6" relative="1" as="geometry"><mxPoint y="-5" as="offset" /></mxGeometry>
+        </mxCell>
+
+
+        <!-- 2. RELATION: kategori memiliki barang -->
+        <mxCell id="rel_cat_item" value="memiliki" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="780" y="80" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- Lines and Cardinality -->
+        <mxCell id="rl_c1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_cat" target="rel_cat_item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_c1" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_c1">
+          <mxGeometry x="-0.6" relative="1" as="geometry"><mxPoint y="-5" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rl_c2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="rel_cat_item" target="ent_item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_c2" value="N" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_c2">
+          <mxGeometry x="0.6" relative="1" as="geometry"><mxPoint y="-5" as="offset" /></mxGeometry>
+        </mxCell>
+
+
+        <!-- 3. RELATION: barang memiliki transaksi_persediaan -->
+        <mxCell id="rel_item_inv" value="memiliki" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="600" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- Lines and Cardinality -->
+        <mxCell id="rl_i1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_item" target="rel_item_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_i1" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_i1">
+          <mxGeometry x="-0.6" relative="1" as="geometry"><mxPoint x="10" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rl_i2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="rel_item_inv" target="ent_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_i2" value="N" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_i2">
+          <mxGeometry x="0.6" relative="1" as="geometry"><mxPoint x="10" as="offset" /></mxGeometry>
+        </mxCell>
+
+
+        <!-- 4. RELATION: users mencatat transaksi_persediaan -->
+        <mxCell id="rel_u_inv" value="mencatat" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="380" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- Lines and Cardinality -->
+        <mxCell id="rl_ui1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="rel_u_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_ui1" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_ui1">
+          <mxGeometry x="-0.5" relative="1" as="geometry"><mxPoint y="-5" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rl_ui2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="rel_u_inv" target="ent_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_ui2" value="N" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_ui2">
+          <mxGeometry x="0.5" relative="1" as="geometry"><mxPoint y="-5" as="offset" /></mxGeometry>
+        </mxCell>
+
+
+        <!-- 5. RELATION: users mengelola transaksi_keuangan -->
+        <mxCell id="rel_u_fin" value="mengelola" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="150" y="440" width="110" height="50" as="geometry" />
+        </mxCell>
+        <!-- Lines and Cardinality -->
+        <mxCell id="rl_uf1" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="ent_users" target="rel_u_fin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_uf1" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_uf1">
+          <mxGeometry x="-0.6" relative="1" as="geometry"><mxPoint x="10" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rl_uf2" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="rel_u_fin" target="ent_fin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_uf2" value="N" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=12;fontStyle=1;" connectable="0" vertex="1" parent="rl_uf2">
+          <mxGeometry x="0.6" relative="1" as="geometry"><mxPoint x="10" as="offset" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,109 @@
+<mxfile host="Electron" modified="2026-08-22T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="diag_class" name="Class Diagram - Salim Beras">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ============================================ -->
+        <!-- CONTROLLERS (BLUE BOXES)                     -->
+        <!-- ============================================ -->
+        <mxCell id="ctrl_auth" value="AuthController&#xa;&#xa;+showLogin()&#xa;+login()&#xa;+logout()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ctrl_item" value="ItemController&#xa;&#xa;+index()&#xa;+create()&#xa;+store()&#xa;+edit()&#xa;+update()&#xa;+destroy()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="210" width="160" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ctrl_inv" value="InventoryController&#xa;&#xa;+index()&#xa;+create()&#xa;+store()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ctrl_fin" value="FinancialController&#xa;&#xa;+index()&#xa;+create()&#xa;+store()&#xa;+destroy()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="540" width="160" height="135" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- DATA MANAGER (PINK BOX IN CENTER)            -->
+        <!-- ============================================ -->
+        <mxCell id="mgr_data" value="DataManager&#xa;&#xa;-jenis_data : String&#xa;-status_validasi : Boolean&#xa;&#xa;+validasi_data()&#xa;+simpan_data()&#xa;+update_data()&#xa;+hapus_data()&#xa;+filter_query()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="290" width="180" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- MODELS (YELLOW BOXES)                        -->
+        <!-- ============================================ -->
+        <mxCell id="mdl_user" value="&lt;&lt;User&gt;&gt;&#xa;Model&#xa;&#xa;-id : Bigint&#xa;-name : String&#xa;-username : String&#xa;-password : String&#xa;&#xa;+create()&#xa;+update()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="40" width="160" height="170" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mdl_cat" value="&lt;&lt;Category&gt;&gt;&#xa;Model&#xa;&#xa;-id : Bigint&#xa;-name : String&#xa;-description : Text&#xa;&#xa;+create()&#xa;+update()&#xa;+delete()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="235" width="160" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mdl_item" value="&lt;&lt;Item&gt;&gt;&#xa;Model&#xa;&#xa;-id : Bigint&#xa;-category_id : Bigint&#xa;-sku_code : String&#xa;-name : String&#xa;-unit : String&#xa;-purchase_price : Decimal&#xa;-selling_price : Decimal&#xa;-stock : Int&#xa;-min_stock : Int&#xa;&#xa;+create()&#xa;+update()&#xa;+delete()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="420" width="170" height="230" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mdl_inv" value="&lt;&lt;InventoryTransaction&gt;&gt;&#xa;Model&#xa;&#xa;-id : Bigint&#xa;-item_id : Bigint&#xa;-user_id : Bigint&#xa;-type : Enum&#xa;-quantity : Int&#xa;-notes : Text&#xa;&#xa;+create()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="270" width="180" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mdl_fin" value="&lt;&lt;FinancialTransaction&gt;&gt;&#xa;Model&#xa;&#xa;-id : Bigint&#xa;-user_id : Bigint&#xa;-type : Enum&#xa;-category : String&#xa;-amount : Decimal&#xa;-description : Text&#xa;-transaction_date : Date&#xa;&#xa;+create()&#xa;+delete()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="480" width="180" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- DATABASE (GRAY BOX AT BOTTOM RIGHT)          -->
+        <!-- ============================================ -->
+        <mxCell id="db_sys" value="Database&#xa;&#xa;+insert()&#xa;+select()&#xa;+update()&#xa;+delete()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="340" width="140" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- DEPENDENCY ARROWS                            -->
+        <!-- ============================================ -->
+        <!-- Controller -> DataManager -->
+        <mxCell id="edge_c1" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="ctrl_auth" target="mgr_data">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="240" y="120" /><mxPoint x="240" y="340" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_c2" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="ctrl_item" target="mgr_data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_c3" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="ctrl_inv" target="mgr_data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_c4" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="ctrl_fin" target="mgr_data">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="240" y="610" /><mxPoint x="240" y="420" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- DataManager -> Models -->
+        <mxCell id="edge_m1" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mgr_data" target="mdl_user">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="500" y="340" /><mxPoint x="500" y="120" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_m2" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mgr_data" target="mdl_cat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_m3" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mgr_data" target="mdl_item">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="500" y="430" /><mxPoint x="500" y="530" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Models -> Database -->
+        <mxCell id="edge_db1" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mdl_inv" target="db_sys">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_db2" value="Dependency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endSize=8;fontSize=11;" edge="1" parent="1" source="mdl_fin" target="db_sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="950" y="580" /><mxPoint x="950" y="440" /></Array></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
